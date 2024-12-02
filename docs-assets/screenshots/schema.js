@@ -224,9 +224,7 @@ export default {
         },
         before: async (page) => {
             await page.click('#customizedActionGroup button')
-            await page.waitForSelector(
-                '#customizedActionGroup .fi-dropdown-list',
-            )
+            await page.waitForSelector('#customizedActionGroup .fi-dropdown-list')
 
             await page.hover('#customizedActionGroup .fi-dropdown-list-item')
 
@@ -243,9 +241,7 @@ export default {
         },
         before: async (page) => {
             await page.click('#actionGroupPlacement button')
-            await page.waitForSelector(
-                '#actionGroupPlacement .fi-dropdown-list',
-            )
+            await page.waitForSelector('#actionGroupPlacement .fi-dropdown-list')
 
             await page.hover('#actionGroupPlacement .fi-dropdown-list-item')
 
@@ -455,12 +451,8 @@ export default {
         },
         before: async (page) => {
             await page.click('#multipleSelect .choices')
-            await page.click(
-                '#multipleSelect .choices #choices--datamultipleSelect-item-choice-2',
-            )
-            await page.click(
-                '#multipleSelect .choices #choices--datamultipleSelect-item-choice-3',
-            )
+            await page.click('#multipleSelect .choices #choices--datamultipleSelect-item-choice-2')
+            await page.click('#multipleSelect .choices #choices--datamultipleSelect-item-choice-3')
 
             await new Promise((resolve) => setTimeout(resolve, 500))
         },
@@ -1515,7 +1507,7 @@ export default {
             await page.click('#textCopyable .fi-in-text-item')
 
             await new Promise((resolve) => setTimeout(resolve, 500))
-        },
+        }
     },
     'infolists/entries/icon/simple': {
         url: 'infolists/entries',
@@ -2059,7 +2051,7 @@ export default {
             await page.click('.fi-ta-col-toggle button')
 
             await new Promise((resolve) => setTimeout(resolve, 500))
-        },
+        }
     },
     'tables/columns/tooltips': {
         url: 'tables?table=columnTooltips',
@@ -2070,12 +2062,10 @@ export default {
             deviceScaleFactor: 3,
         },
         before: async (page) => {
-            await page.hover(
-                '[wire\\:key$="4.column.email_verified_at"] .fi-ta-col-wrp',
-            )
+            await page.hover('[wire\\:key$="4.column.email_verified_at"] .fi-ta-col-wrp')
 
             await new Promise((resolve) => setTimeout(resolve, 500))
-        },
+        }
     },
     'tables/columns/alignment': {
         url: 'tables?table=columnAlignment',
