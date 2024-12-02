@@ -2065,7 +2065,7 @@ export default {
             await page.hover('[wire\\:key$="4.column.email_verified_at"] .fi-ta-col-wrp')
 
             await new Promise((resolve) => setTimeout(resolve, 500))
-        }
+        },
     },
     'tables/columns/alignment': {
         url: 'tables?table=columnAlignment',
